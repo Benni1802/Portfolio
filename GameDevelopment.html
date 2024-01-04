@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Benedikt Dietinger</title>
 
     <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./GameDevelopment.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
@@ -17,32 +16,24 @@
     />
   </head>
   <body>
-    <div class="home">
-      <div class="navbar">
-        <div class="navbar1">
-          <div class="navbar-links">
-            <div class="links">
-              <a class="about-me" id="aboutMe">About me</a>
-              <a class="about-me" id="gameDevelopment">Game Development</a>
-              <a class="about-me" id="computerGraphics">Computer Graphics</a>
+    <div class="game-development3">
+      <div class="navbar4">
+        <div class="navbar5">
+          <div class="navbar-links2">
+            <div class="links2">
+              <a class="about-me2" id="aboutMe">About me</a>
+              <a class="about-me2" id="gameDevelopment">Game Development</a>
+              <a class="about-me2" id="computerGraphics">Computer Graphics</a>
             </div>
-            <a class="home-app-logo">
+            <a class="home-app-logo2">
               <img
-                class="home-app-logo-icon"
+                class="home-app-logo-icon2"
                 alt=""
                 src="./public/home-app-logo@2x.png"
               />
             </a>
           </div>
         </div>
-      </div>
-      <div class="main-page">
-        <a class="game-development-" id="gameDevelopment1">
-          <div class="game-development1">Game Development</div>
-        </a>
-        <a class="computer-graphics-" id="computerGraphics1">
-          <div class="game-development1">Computer Graphics</div>
-        </a>
       </div>
     </div>
 
@@ -53,34 +44,20 @@
           window.location.href = "./AboutMe.html";
         });
       }
-
+      
       var gameDevelopment = document.getElementById("gameDevelopment");
       if (gameDevelopment) {
         gameDevelopment.addEventListener("click", function (e) {
           window.location.href = "./GameDevelopment.html";
         });
       }
-
+      
       var computerGraphics = document.getElementById("computerGraphics");
       if (computerGraphics) {
         computerGraphics.addEventListener("click", function (e) {
           window.location.href = "./ComputerGraphics.html";
         });
       }
-
-      var gameDevelopment1 = document.getElementById("gameDevelopment1");
-      if (gameDevelopment1) {
-        gameDevelopment1.addEventListener("click", function (e) {
-          window.location.href = "./GameDevelopment.html";
-        });
-      }
-
-      var computerGraphics1 = document.getElementById("computerGraphics1");
-      if (computerGraphics1) {
-        computerGraphics1.addEventListener("click", function (e) {
-          window.location.href = "./ComputerGraphics.html";
-        });
-      }
-    </script>
+      </script>
   </body>
 </html>

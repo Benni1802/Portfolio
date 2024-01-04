@@ -1,0 +1,89 @@
+.about-me4 {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  cursor: pointer;
+}
+.links3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 783px;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-26xl);
+}
+.home-app-logo-icon3 {
+  position: absolute;
+  height: 72.8%;
+  width: 75.13%;
+  top: 14.77%;
+  right: 12.44%;
+  bottom: 12.44%;
+  left: 12.44%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.home-app-logo3 {
+  text-decoration: none;
+  position: absolute;
+  top: -2.6px;
+  left: -83.6px;
+  width: 38.6px;
+  height: 38.6px;
+  cursor: pointer;
+}
+.navbar-links3 {
+  position: relative;
+  width: 783px;
+  height: 36px;
+}
+.about-me3,
+.navbar6,
+.navbar7 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.navbar7 {
+  background-color: var(--color-steelblue);
+  width: 1920px;
+  height: 100px;
+  flex-shrink: 0;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-11xl) 133.5283203125px;
+  box-sizing: border-box;
+}
+.about-me3,
+.navbar6 {
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbar6 {
+  align-self: stretch;
+  height: 1080px;
+  flex-shrink: 0;
+}
+.about-me3 {
+  position: relative;
+  background-color: var(--color-gray);
+  width: 100%;
+  height: 1079.9px;
+  text-align: center;
+  font-size: var(--font-size-11xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 960px) {
+  .navbar6,
+  .navbar7 {
+    align-self: stretch;
+    width: auto;
+  }
+}

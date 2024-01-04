@@ -18,6 +18,11 @@ body {
   --color-lightsteelblue: #99afbf;
   --color-steelblue: #1e91d6;
 
+  /* Gaps */
+  --gap-26xl: 45px;
+
   /* Paddings */
   --padding-311xl: 330px;
+  --padding-11xl: 30px;
+  --padding-114xl-5: 133.5px;
 }
