@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
+		<title>Portfolio Benedikt Dietinger</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./global.css" />
+		<link rel="stylesheet" href="./lost-in-the-crowd.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Iceland:wght@400&display=swap"
+		/>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+			<div class="container-fluid">
+				<div class="icon">
+					<a href="/index.html">
+						<img
+							alt="Home"
+							src="./assets/icons/home_icon.svg"
+							class="normal"
+						/>
+						<img
+							alt="Home"
+							src="./assets/icons/home_icon_hover.svg"
+							class="hover"
+						/>
+					</a>
+				</div>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="about-me.html"
+								>About me</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="game-development.html"
+								>Game Development</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="computer-graphics.html"
+								>Computer Graphics</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<div class="heading">
+				<h1>Lost In The Crowd</h1>
+			</div>
+			<div id="gallery" class="gallery">
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+				<img src="assets/LITC/Main_Menu.JPG" alt="Main Menu" />
+				<img src="assets/LITC/Tutorial.JPG" alt="Tutorial" />
+				<img src="assets/LITC/Gameplay.JPG" alt="Gameplay" />
+				<img
+					src="assets/LITC/Task_Completed.JPG"
+					alt="Gameplay Task Completed"
+				/>
+				<img
+					src="assets/LITC/Eliminated.JPG"
+					alt="Gameplay Player Eliminated"
+				/>
+				<img src="assets/LITC/Wins.JPG" alt="End screen" />
+				<div class="video-container">
+					<video id="video" controls onloadstart="this.volume=0.5">
+						<source
+							src="assets/LITC/LostInTheCrowd.mp4"
+							type="video/mp4"
+						/>
+						Your browser does not support the video tag.
+					</video>
+					<div id="videoClick"></div>
+				</div>
+			</div>
+			<div id="modal" class="modal">
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+
+				<!-- Modal Content (The Image) -->
+				<!--<img class="modal-content" id="m_img" />-->
+				<div class="container-lg">
+					<div id="carousel" class="carousel slide">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									class="modal-content d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<video id="videoCarousel" controls onloadstart="this.volume=0.5">
+									<source
+										src="assets/LITC/LostInTheCrowd.mp4"
+										type="video/mp4"
+									/>
+									Your browser does not support the video tag.
+								</video>
+							</div>
+						</div>
+
+						<button
+							id="carousel-prev"
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							id="carousel-next"
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h2>Gameplay</h2>
+				<p>
+					Lost In The Crowd is a 1v1 local-multiplayer
+					NPC-Hide-And-Seek Game. The main objective is to find and
+					eliminate your opponent. Of course, both players have the
+					same objective, so they have to try and stay undetected
+					while looking for their opponent. To achieve this, they have
+					to try to act natural and move like the NPCs around them. If
+					a player has a guess on who their opponent might be, they
+					can try to get closer and eliminate them (without being too
+					obvious of course). However, the players only have limited
+					attempts, so they can’t just kill anyone.<br /><br />But
+					killing your opponent is not the only way to win! Both
+					players also have a list of tasks they can complete to gain
+					advantages. If one player manages to finish their tasks,
+					they win the game. They also get small hints on their
+					opponent for completing tasks. However, these tasks are not
+					without risk! If a player completes a task, their opponent
+					will be informed shortly after, which might reveal their
+					identity. Since there are multiple ways to win the game, the
+					players can choose their own strategies and adapt their
+					playstyle accordingly.
+				</p>
+			</div>
+			<div>
+				<h2>Development</h2>
+				<p>
+					Lost In The Crowd was the first proper game I ever created.
+					It was made in the second semester of my bachelor’s
+					programme using SFML in C# . Since the game was developed by
+					me alone, I mostly used 3rd party assets in order to focus
+					on the programming.
+					<br />The whole development process took a bit over one
+					month. The first few weeks were made up of programming.
+					After that, I had a short playtesting session, were I got
+					some feedback from fellow students. I then used the
+					remaining time to implement some of the feedback and polish
+					the game.
+				</p>
+			</div>
+		</main>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			var CloseButton = document.getElementsByClassName("close")[0];
+			var modal = document.getElementById("modal");
+			var modalImg = document.getElementById("m_img");
+
+			var images = document.querySelectorAll("#gallery img");
+			const carouselElement = document.querySelector("#carousel");
+			const carousel = new bootstrap.Carousel(carouselElement, {
+				interval: false,
+				touch: true,
+			});
+			var carouselImages =
+				carouselElement.getElementsByClassName("carousel-item");
+			var video = document.getElementById("video");
+			var videoCarousel = document.getElementById("videoCarousel");
+			var prev = document.getElementById("carousel-prev");
+			var next = document.getElementById("carousel-next");
+			for (
+				var i = 0;
+				i < images.length && i < carouselImages.length;
+				i++
+			) {
+				carouselImages[i].children[0].src = images[i].src;
+				images[i].onclick = (function (index) {
+					return function () {
+						carousel.to(index);
+						openModal();
+						video.pause();
+						videoCarousel.currentTime = 0;
+					};
+				})(i);
+			}
+			
+			var videoClick = document.getElementById("videoClick");
+
+			videoClick.onclick = function () {
+				carousel.to(7)
+				openModal();
+				video.pause();
+				videoCarousel.currentTime = 0;
+			};
+
+			CloseButton.onclick = function () {
+				videoCarousel.pause();
+				videoCarousel.currentTime = 0;
+				modal.style.display = "none";
+			};
+
+			prev.onclick = function () {
+				videoCarousel.pause();
+			};
+
+			next.onclick = function () {
+				videoCarousel.pause();
+			};
+
+			function openModal() {
+				modal.style.display = "block";
+			}
+		</script>
+	</body>
+</html>

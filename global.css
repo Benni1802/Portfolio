@@ -1,0 +1,106 @@
+body {
+	margin: 0;
+	line-height: normal;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-size: var(--font-size-11xl);
+	color: var(--color-white);
+	font-family: var(--font-inter);
+	background-color: var(--color-gray);
+}
+
+.icon {
+	width: 50px;
+	height: auto;
+	margin-left: 2vw;
+	display: inline-block;
+	position: relative;
+	bottom: 2px;
+}
+
+.icon img {
+	width: 100%;
+	height: auto;
+}
+
+.icon:hover .normal {
+	opacity: 0;
+}
+
+.icon .hover {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.icon:hover .hover {
+	display: inline;
+	opacity: 1;
+}
+
+.navbar {
+	height: 80px;
+	background-color: var(--color-steelblue);
+	z-index: 100;
+}
+
+.container-fluid {
+	background-color: var(--color-steelblue);
+}
+
+.nav-link {
+	color: var(--color-white);
+	font-size: 30px;
+	font-family: var(--font-inter);
+	background-color: var(--color-steelblue);
+}
+
+.nav-link:hover {
+	color: var(--color-lightsteelblue);
+}
+
+.nav-link {
+	margin-left: 1vw;
+}
+
+.navbar-toggler-icon {
+	background-image: url(./assets/icons/menu_icon.svg);
+}
+
+.navbar-toggler {
+	border: none;
+}
+
+:root {
+	/* fonts */
+	--font-iceland: Iceland;
+	--font-inter: Inter;
+
+	/* font sizes */
+	--font-size-74xl: 93px;
+	--font-size-11xl: 30px;
+
+	/* Colors */
+	--color-gray: #0f110c;
+	--color-white: #fff;
+	--color-lightsteelblue: #99afbf;
+	--color-steelblue: #1e91d6;
+	--color-steelblue-transp: #1e8fd6a8;
+
+	/* Gaps */
+	--gap-26xl: 45px;
+
+	/* Paddings */
+	--padding-311xl: 330px;
+	--padding-11xl: 30px;
+	--padding-114xl-5: 133.5px;
+}
+
+@media screen and (max-width: 1500px) {
+	.nav-link {
+		font-size: 20px;
+	}
+}
