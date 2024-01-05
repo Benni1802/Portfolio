@@ -1,0 +1,49 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.heading {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	width: 100%;
+}
+
+h1 {
+	font-family: var(--font-iceland);
+	font-size: 120px;
+	color: var(--color-steelblue);
+	margin-bottom: 2vw;
+	margin-left: 2vw;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	border: 1vw solid var(--color-steelblue);
+	border-style: inset;
+	padding: 1vw;
+	padding-right: 0;
+}
+
+img {
+	width: 20vw;
+	padding-right: 1vw;
+	padding-bottom: 1vw;
+}
+
+.gallery :nth-child(n + 4):nth-child(-n + 8) {
+	padding-bottom: 0;
+}
+
+.gallery :nth-child(4) {
+	padding-right: 1;
+}
+
+.gallery :nth-child(8) {
+	padding-right: 1;
+}

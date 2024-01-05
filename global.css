@@ -66,11 +66,8 @@ body {
 	margin-left: 1vw;
 }
 
-
-
 .navbar-toggler-icon {
 	background-image: url(./assets/menu_icon.svg);
-	
 }
 
 .navbar-toggler {
@@ -106,5 +103,4 @@ body {
 	.nav-link {
 		font-size: 20px;
 	}
-
 }
