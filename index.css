@@ -147,6 +147,10 @@ main a {
 	font-size: var(--font-size-74xl);
 }
 
+main a:hover {
+  background-color: var(--color-lightsteelblue);
+}
+
 main :first-child {
   border-right: 4px solid var(--color-white);
 }
