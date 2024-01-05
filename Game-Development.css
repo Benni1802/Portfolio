@@ -9,9 +9,15 @@ main {
   width: 10%;
 }
 
-.carousel-control-prev:hover, .carousel-control-next:hover {
-  background-color: rgba(255, 255, 255, 0.425);
+.carousel-control-prev {
+  left: -10%;
 }
+
+.carousel-control-next {
+  right: -10%;
+}
+
+
 
 .carousel-control-prev-icon {
   background-image: url(assets/prev_icon.svg);
@@ -20,3 +26,36 @@ main {
 .carousel-control-next-icon {
   background-image: url(assets/next_icon.svg);
 }
+
+.carousel-indicators {
+  bottom: -10%;
+}
+
+@media screen and (max-width: 1500px) {
+  .carousel-control-prev {
+    left: -6%;
+  }
+  
+  .carousel-control-next {
+    right: -6%;
+  }
+  
+  .carousel-indicators {
+    bottom: -6%;
+  }
+}
+
+  @media screen and (max-width: 1000px) {
+    .carousel-control-prev {
+      left: 0;
+    }
+    
+    .carousel-control-next {
+      right: 0;
+    }
+    
+    .carousel-indicators {
+      bottom: 0;
+    }
+  
+  }
