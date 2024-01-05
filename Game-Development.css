@@ -19,11 +19,11 @@ main {
 }
 
 .carousel-control-prev-icon {
-  background-image: url(assets/prev_icon.svg);
+  background-image: url(assets/icons/prev_icon.svg);
 }
 
 .carousel-control-next-icon {
-  background-image: url(assets/next_icon.svg);
+  background-image: url(assets/icons/next_icon.svg);
 }
 
 .carousel-indicators {
@@ -105,7 +105,6 @@ p {
     p {
       font-size: 20px;
     }
-
   }
 
   @media screen and (max-width: 600px) {
