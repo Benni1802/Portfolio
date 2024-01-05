@@ -1,9 +1,9 @@
 main {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 80px);
   justify-content: center;
   align-items: center;
+  margin-top: 5vw;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -47,7 +47,8 @@ p {
   font-family: var(--font-inter);
   font-size: 25px;
   color: var(--color-white);
-  width: 40vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
   text-align: center;
 }
 
@@ -64,6 +65,10 @@ p {
 
 .description a:hover {
   background-color: var(--color-steelblue);
+}
+
+.container-lg {
+  margin-bottom: 2vw;
 }
 
 @media screen and (max-width: 1500px) {
@@ -93,4 +98,27 @@ p {
       bottom: 0;
     }
   
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+  }
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    .description a {
+      font-size: 15px;
+    }
+    
   }
