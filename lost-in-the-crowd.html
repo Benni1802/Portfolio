@@ -74,15 +74,46 @@
 			<div class="heading">
 				<h1>Lost In The Crowd</h1>
 			</div>
-			<div class="gallery">
-				<img src="assets/LITC/LostInTheCrowd.jpg" />
-				<img src="assets/LITC/LostInTheCrowd.jpg" />
-				<img src="assets/LITC/LostInTheCrowd.jpg" />
-				<img src="assets/LITC/LostInTheCrowd.jpg" />
-				<img src="assets/LITC/LostInTheCrowd.jpg" />
-				<img src="assets/LITC/LostInTheCrowd.jpg" />
-				<img src="assets/LITC/LostInTheCrowd.jpg" />
-				<img src="assets/LITC/LostInTheCrowd.jpg" />
+			<div id="gallery" class="gallery">
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+				<img
+					src="assets/LITC/LostInTheCrowd.jpg"
+					alt="Lost In The Crowd (game)"
+				/>
+			</div>
+			<div id="modal" class="modal">
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+
+				<!-- Modal Content (The Image) -->
+				<img class="modal-content" id="m_img" />
 			</div>
 		</main>
 		<script
@@ -90,5 +121,33 @@
 			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			var span = document.getElementsByClassName("close")[0];
+			var modal = document.getElementById("modal");
+			var modalImg = document.getElementById("m_img");
+			span.onclick = function () {
+				modal.style.display = "none";
+			};
+
+			var images = document.getElementById("gallery").children;
+			for (var i = 0; i < images.length; i++) {
+				images[i].onclick = function () {
+					openModal(this);
+				};
+			}
+			function openModal(img) {
+				//var img = document.getElementById(id);
+				modal.style.display = "block";
+				modalImg.src = img.src;
+			}
+
+			// var modal = document.getElementById("myModal");
+			// var img = document.getElementById("myImg");
+			// var modalImg = document.getElementById("img01");
+			// img.onclick = function () {
+			// 	modal.style.display = "block";
+			// 	modalImg.src = this.src;
+			// };
+		</script>
 	</body>
 </html>
