@@ -3,7 +3,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5vw;
+  margin-top: 3vw;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -39,8 +39,16 @@ main {
 
 h1 {
   font-family: var(--font-iceland);
-  font-size: var(--font-size-74xl);
+  font-size: 170px;
   color: var(--color-steelblue);
+  margin-bottom: 2vw;
+}
+
+h2 {
+  font-family: var(--font-iceland);
+  font-size: 100px;
+  color: var(--color-steelblue);
+  margin-bottom: 2vw;
 }
 
 p {
@@ -76,6 +84,10 @@ p {
     left: -6%;
   }
   
+  h1 {
+    font-size: 150px;
+  }
+
   .carousel-control-next {
     right: -6%;
   }
@@ -85,39 +97,55 @@ p {
   }
 }
 
-  @media screen and (max-width: 1000px) {
-    .carousel-control-prev {
-      left: 0;
-    }
-    
-    .carousel-control-next {
-      right: 0;
-    }
-    
-    .carousel-indicators {
-      bottom: 0;
-    }
+@media screen and (max-width: 1200px) {
+  .carousel-control-prev {
+    left: 0;
+  }
   
-    h1 {
-      font-size: 60px;
-    }
-
-    p {
-      font-size: 20px;
-    }
+  .carousel-control-next {
+    right: 0;
+  }
+  
+  .carousel-indicators {
+    bottom: 0;
   }
 
-  @media screen and (max-width: 600px) {
-    h1 {
-      font-size: 40px;
-    }
-
-    p {
-      font-size: 15px;
-    }
-
-    .description a {
-      font-size: 15px;
-    }
-    
+  h1 {
+    font-size: 100px;
   }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 60px;
+  }
+  
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .description a {
+    font-size: 15px;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+  }
+  
+
+}
