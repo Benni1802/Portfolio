@@ -80,32 +80,32 @@
 					alt="Lost In The Crowd (game)"
 				/>
 				<img
-					src="assets/LITC/LostInTheCrowd.jpg"
-					alt="Lost In The Crowd (game)"
+					src="assets/LITC/Main_Menu.JPG"
+					alt="Main Menu"
+				/>
+				<img
+					src="assets/LITC/Tutorial.JPG"
+					alt="Tutorial"
+				/>
+				<img
+					src="assets/LITC/Gameplay.JPG"
+					alt="Gameplay"
+				/>
+				<img
+					src="assets/LITC/Task_Completed.JPG"
+					alt="Gameplay Task Completed"
+				/>
+				<img
+					src="assets/LITC/Eliminated.JPG"
+					alt="Gameplay Player Eliminated"
+				/>
+				<img
+					src="assets/LITC/Wins.JPG"
+					alt="End screen"
 				/>
 				<img
 					src="assets/LITC/LostInTheCrowd.jpg"
-					alt="Lost In The Crowd (game)"
-				/>
-				<img
-					src="assets/LITC/LostInTheCrowd.jpg"
-					alt="Lost In The Crowd (game)"
-				/>
-				<img
-					src="assets/LITC/LostInTheCrowd.jpg"
-					alt="Lost In The Crowd (game)"
-				/>
-				<img
-					src="assets/LITC/LostInTheCrowd.jpg"
-					alt="Lost In The Crowd (game)"
-				/>
-				<img
-					src="assets/LITC/LostInTheCrowd.jpg"
-					alt="Lost In The Crowd (game)"
-				/>
-				<img
-					src="assets/LITC/LostInTheCrowd.jpg"
-					alt="Lost In The Crowd (game)"
+					alt="Video trailer"
 				/>
 			</div>
 			<div id="modal" class="modal">
@@ -113,12 +113,99 @@
 				<span class="close">&times;</span>
 
 				<!-- Modal Content (The Image) -->
-				<img class="modal-content" id="m_img" />
+				<!--<img class="modal-content" id="m_img" />-->
+				<div class="container-lg">
+					<div id="carousel" class="carousel slide">
+						
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Lost In The Crowd(game)"
+								/>
+							</div>
+						</div>
+
+						<button
+							id="carousel-prev"
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							id="carousel-next"
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
 			</div>
 		</main>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
 			crossorigin="anonymous"
 		></script>
 		<script>
@@ -128,26 +215,27 @@
 			span.onclick = function () {
 				modal.style.display = "none";
 			};
-
 			var images = document.getElementById("gallery").children;
-			for (var i = 0; i < images.length; i++) {
-				images[i].onclick = function () {
-					openModal(this);
-				};
-			}
-			function openModal(img) {
-				//var img = document.getElementById(id);
-				modal.style.display = "block";
-				modalImg.src = img.src;
+			const carouselElement = document.querySelector("#carousel");
+			const carousel = new bootstrap.Carousel(carouselElement, {
+				interval: false,
+				touch: true,
+			});
+			var carouselImages =
+				carouselElement.getElementsByClassName("carousel-item");
+			for (var i = 0; i < images.length && i < carouselImages.length; i++) {
+				carouselImages[i].children[0].src = images[i].src;
+				images[i].onclick = (function (index) {
+					return function () {
+						carousel.to(index);
+						openModal(images[index]);
+					};
+				})(i);
 			}
 
-			// var modal = document.getElementById("myModal");
-			// var img = document.getElementById("myImg");
-			// var modalImg = document.getElementById("img01");
-			// img.onclick = function () {
-			// 	modal.style.display = "block";
-			// 	modalImg.src = this.src;
-			// };
+			function openModal(img) {
+				modal.style.display = "block";
+			}
 		</script>
 	</body>
 </html>
