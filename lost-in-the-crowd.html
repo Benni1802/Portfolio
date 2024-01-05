@@ -79,18 +79,9 @@
 					src="assets/LITC/LostInTheCrowd.jpg"
 					alt="Lost In The Crowd (game)"
 				/>
-				<img
-					src="assets/LITC/Main_Menu.JPG"
-					alt="Main Menu"
-				/>
-				<img
-					src="assets/LITC/Tutorial.JPG"
-					alt="Tutorial"
-				/>
-				<img
-					src="assets/LITC/Gameplay.JPG"
-					alt="Gameplay"
-				/>
+				<img src="assets/LITC/Main_Menu.JPG" alt="Main Menu" />
+				<img src="assets/LITC/Tutorial.JPG" alt="Tutorial" />
+				<img src="assets/LITC/Gameplay.JPG" alt="Gameplay" />
 				<img
 					src="assets/LITC/Task_Completed.JPG"
 					alt="Gameplay Task Completed"
@@ -99,14 +90,8 @@
 					src="assets/LITC/Eliminated.JPG"
 					alt="Gameplay Player Eliminated"
 				/>
-				<img
-					src="assets/LITC/Wins.JPG"
-					alt="End screen"
-				/>
-				<img
-					src="assets/LITC/LostInTheCrowd.jpg"
-					alt="Video trailer"
-				/>
+				<img src="assets/LITC/Wins.JPG" alt="End screen" />
+				<img src="assets/LITC/LostInTheCrowd.jpg" alt="Video trailer" />
 			</div>
 			<div id="modal" class="modal">
 				<!-- The Close Button -->
@@ -116,7 +101,6 @@
 				<!--<img class="modal-content" id="m_img" />-->
 				<div class="container-lg">
 					<div id="carousel" class="carousel slide">
-						
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img
@@ -197,6 +181,47 @@
 					</div>
 				</div>
 			</div>
+			<div>
+				<h2>Gameplay</h2>
+				<p>
+					Lost In The Crowd is a 1v1 local-multiplayer
+					NPC-Hide-And-Seek Game. The main objective is to find and
+					eliminate your opponent. Of course, both players have the
+					same objective, so they have to try and stay undetected
+					while looking for their opponent. To achieve this, they have
+					to try to act natural and move like the NPCs around them. If
+					a player has a guess on who their opponent might be, they
+					can try to get closer and eliminate them (without being too
+					obvious of course). However, the players only have limited
+					attempts, so they can’t just kill anyone.<br /><br />But
+					killing your opponent is not the only way to win! Both
+					players also have a list of tasks they can complete to gain
+					advantages. If one player manages to finish their tasks,
+					they win the game. They also get small hints on their
+					opponent for completing tasks. However, these tasks are not
+					without risk! If a player completes a task, their opponent
+					will be informed shortly after, which might reveal their
+					identity. Since there are multiple ways to win the game, the
+					players can choose their own strategies and adapt their
+					playstyle accordingly.
+				</p>
+			</div>
+			<div>
+				<h2>Development</h2>
+				<p>
+					Lost In The Crowd was the first proper game I ever created.
+					It was made in the second semester of my bachelor’s
+					programme using SFML in C# . Since the game was developed by
+					me alone, I mostly used 3rd party assets in order to focus
+					on the programming.
+					<br />The whole development process took a bit over one
+					month. The first few weeks were made up of programming.
+					After that, I had a short playtesting session, were I got
+					some feedback from fellow students. I then used the
+					remaining time to implement some of the feedback and polish
+					the game.
+				</p>
+			</div>
 		</main>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -223,7 +248,11 @@
 			});
 			var carouselImages =
 				carouselElement.getElementsByClassName("carousel-item");
-			for (var i = 0; i < images.length && i < carouselImages.length; i++) {
+			for (
+				var i = 0;
+				i < images.length && i < carouselImages.length;
+				i++
+			) {
 				carouselImages[i].children[0].src = images[i].src;
 				images[i].onclick = (function (index) {
 					return function () {

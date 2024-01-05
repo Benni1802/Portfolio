@@ -29,6 +29,7 @@ h1 {
 	border-style: inset;
 	padding: 1vw;
 	padding-right: 0;
+	margin-bottom: 1vw;
 }
 
 .gallery img {
@@ -110,13 +111,6 @@ h1 {
 	cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
-	.modal-content {
-		width: 100%;
-	}
-}
-
 .carousel-control-prev,
 .carousel-control-next {
 	width: 10%;
@@ -128,6 +122,30 @@ h1 {
 
 .carousel-control-next {
 	right: -10%;
+}
+
+h2 {
+	font-family: var(--font-iceland);
+	font-size: 70px;
+	color: var(--color-white);
+	margin-left: 9vw;
+	margin-top: 1vw;
+}
+
+p {
+	font-family: var(--font-inter);
+	font-size: 25px;
+	color: var(--color-white);
+	margin-left: 9vw;
+	margin-right: 30vw;
+	text-align: left;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+	.modal-content {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 1500px) {
@@ -161,6 +179,14 @@ h1 {
 	h1 {
 		font-size: 80px;
 	}
+
+	h2 {
+		font-size: 60px;
+	}
+
+	p {
+		font-size: 20px;
+	}
 }
 
 @media screen and (max-width: 650px) {
@@ -173,10 +199,26 @@ h1 {
 	h1 {
 		font-size: 40px;
 	}
+
+	h2 {
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 15px;
+	}
 }
 
 @media screen and (max-width: 320px) {
 	h1 {
 		font-size: 30px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 10px;
 	}
 }
