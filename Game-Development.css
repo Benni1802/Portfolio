@@ -1,7 +1,3 @@
-body {
-  background-color: var(--color-gray);
-}
-
 main {
   display: flex;
   height: calc(100vh - 80px);
