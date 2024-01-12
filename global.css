@@ -74,6 +74,11 @@ body {
 	border: none;
 }
 
+footer {
+	background-color: var(--color-steelblue);
+	height: 80px;
+}
+
 :root {
 	/* fonts */
 	--font-iceland: Iceland;

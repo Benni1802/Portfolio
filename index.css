@@ -10,7 +10,6 @@ main a {
 	align-items: center;
 	justify-content: center;
 	background-color: var(--color-gray);
-	/* min-height: calc(100vh - 80px); */
 	height: 30vw;
 	width: 100%;
 	color: var(--color-steelblue);
@@ -19,11 +18,11 @@ main a {
 }
 
 main h1 {
-	margin-top: 5vw;
-	margin-bottom: 5vw;
+	margin-top: 10vh;
+	margin-bottom: 20vh;
 	text-align: center;
 	color: var(--color-steelblue);
-	font-size: var(--font-size-74xl);
+	font-size: 150px;
 	font-family: var(--font-iceland);
 }
 
@@ -31,8 +30,8 @@ main div {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	border-top: 8px solid var(--color-lightsteelblue);
-	border-bottom: 8px solid var(--color-lightsteelblue);
+	height: 100%;
+	margin-bottom: 20vh;
 }
 
 
@@ -48,15 +47,22 @@ main div :last-child {
 	border-left: 4px solid var(--color-lightsteelblue);
 }
 
+
+
 @media screen and (max-width: 1500px) {
 	main a {
 		font-size: 50px;
+	}
+
+	main h1 {
+		font-size: 100px;
 	}
 }
 
 @media screen and (max-width: 960px) {
 	main div {
 		flex-direction: column;;
+		margin-bottom: 0;
 	}
 
 	main div :first-child {
@@ -72,6 +78,11 @@ main div :last-child {
 	main a {
 		height: 50vw;
 	}
+
+	main h1 {
+		margin-bottom: 5vh;
+	}
+
 }
 
 @media screen and (max-width: 450px) {
