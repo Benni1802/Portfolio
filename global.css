@@ -76,8 +76,37 @@ body {
 
 footer {
 	background-color: var(--color-steelblue);
-	height: 80px;
+	min-height: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	gap: 2vh;
 }
+
+footer>div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+}
+
+footer p {
+	font-size: 17px;
+	font-family: var(--font-inter);
+	color: var(--color-white);
+	margin: 0;
+}
+
+footer a {
+	font-size: 17px;
+	font-family: var(--font-inter);
+	color: var(--color-white);
+	text-decoration: none;
+}
+
 
 :root {
 	/* fonts */
