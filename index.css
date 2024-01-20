@@ -15,6 +15,8 @@ main a {
 	color: var(--color-steelblue);
 	font-family: var(--font-iceland);
 	font-size: 70px;
+	padding-top: 20vh;
+	padding-bottom: 20vh;
 }
 
 main h1 {
@@ -26,7 +28,7 @@ main h1 {
 	font-family: var(--font-iceland);
 }
 
-main div {
+.topics {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
@@ -34,16 +36,16 @@ main div {
 	margin-bottom: 20vh;
 }
 
-
-main a:hover {
+.topics a:hover {
 	background-color: var(--color-lightsteelblue);
 }
 
-main div :first-child {
+.topics :first-child {
 	border-right: 4px solid var(--color-lightsteelblue);
+	
 }
 
-main div :last-child {
+.topics :last-child {
 	border-left: 4px solid var(--color-lightsteelblue);
 }
 
@@ -60,17 +62,17 @@ main div :last-child {
 }
 
 @media screen and (max-width: 960px) {
-	main div {
+	.topics {
 		flex-direction: column;;
 		margin-bottom: 0;
 	}
 
-	main div :first-child {
+	.topics :first-child {
 		border-bottom: 4px solid var(--color-lightsteelblue);
 		border-right: none;
 	}
 
-	main div :last-child {
+	.topics :last-child {
 		border-top: 4px solid var(--color-lightsteelblue);
 		border-left: none;
 	}
