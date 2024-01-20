@@ -178,6 +178,10 @@ p {
 	.carousel-control-prev {
 		left: -6%;
 	}
+
+	p {
+		margin-right: 20vw;
+	}
 }
 
 @media screen and (max-width: 1000px) {
@@ -194,6 +198,10 @@ p {
 
 	.close {
 		top: 100px;
+	}
+
+	p {
+		margin-right: 10vw;
 	}
 }
 
