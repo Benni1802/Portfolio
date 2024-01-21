@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="initial-scale=1, width=device-width" />
 		<title>Portfolio Benedikt Dietinger</title>
+		<link rel="icon" href="./assets/icons/favicon.svg" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -154,7 +155,11 @@
 								/>
 							</div>
 							<div class="carousel-item">
-								<video id="videoCarousel" controls onloadstart="this.volume=0.25">
+								<video
+									id="videoCarousel"
+									controls
+									onloadstart="this.volume=0.25"
+								>
 									<source
 										src="./assets/LITC/LostInTheCrowd.mp4"
 										type="video/mp4"
@@ -302,11 +307,11 @@
 					};
 				})(i);
 			}
-			
+
 			var videoClick = document.getElementById("videoClick");
 
 			videoClick.onclick = function () {
-				carousel.to(7)
+				carousel.to(7);
 				openModal();
 				video.pause();
 				videoCarousel.currentTime = 0;
