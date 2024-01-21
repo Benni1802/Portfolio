@@ -10,6 +10,10 @@ body {
 	background-color: var(--color-gray);
 }
 
+main {
+	min-height: calc(100vh - 200px);
+}
+
 .icon {
 	width: 50px;
 	height: auto;
@@ -76,7 +80,7 @@ body {
 
 footer {
 	background-color: var(--color-steelblue);
-	min-height: 80px;
+	height: 120px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -116,7 +120,6 @@ footer a {
 	color: var(--color-white);
 	text-decoration: none;
 }
-
 
 :root {
 	/* fonts */
@@ -158,8 +161,16 @@ footer a {
 		font-size: 12px;
 	}
 
-	footer img {
-		width: 20px;
-		height: auto;
+	#phone {
+		width: 15px;
+	}
+
+	#email {
+		width: 17px;
+		margin-top: 2px;
+	}
+
+	.footer-items :first-child {
+		margin-left: 25px;
 	}
 }
