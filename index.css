@@ -3,7 +3,7 @@ main {
 	flex-direction: column;
 }
 
-main a {
+.topics a {
 	text-decoration: none;
 	display: flex;
 	flex-direction: column;
@@ -19,13 +19,14 @@ main a {
 	padding-bottom: 20vh;
 }
 
-main h1 {
+main>a {
 	margin-top: 10vh;
 	margin-bottom: 20vh;
 	text-align: center;
 	color: var(--color-steelblue);
 	font-size: 150px;
 	font-family: var(--font-iceland);
+	text-decoration: none;
 }
 
 .topics {
@@ -52,11 +53,11 @@ main h1 {
 
 
 @media screen and (max-width: 1500px) {
-	main a {
+	.topics a {
 		font-size: 50px;
 	}
 
-	main h1 {
+	main>a {
 		font-size: 100px;
 	}
 }
@@ -77,22 +78,22 @@ main h1 {
 		border-left: none;
 	}
 
-	main a {
+	.topics a {
 		height: 50vw;
 	}
 
-	main h1 {
+	main>a {
 		margin-bottom: 5vh;
 	}
 
 }
 
 @media screen and (max-width: 450px) {
-	main a {
+	.topics a {
 		font-size: 40px;
 	}
 
-	main h1 {
+	main>a {
 		font-size: 50px;
 	}
 }
