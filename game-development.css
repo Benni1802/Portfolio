@@ -50,7 +50,7 @@ h2 {
 	font-family: var(--font-iceland);
 	font-size: 100px;
 	color: var(--color-steelblue);
-	margin-bottom: 2vw;
+	margin-bottom: 1vw;
 }
 
 p {
@@ -79,6 +79,22 @@ p {
 
 .container-lg {
 	margin-bottom: 2vw;
+}
+
+.tags-container {
+	display: flex;
+	flex-direction: row;
+	gap: 2vw;
+	margin-bottom: 2vw;
+}
+
+.tag {
+	font-family: var(--font-inter);
+	font-size: 20px;
+	color: var(--color-white);
+	background-color: var(--color-steelblue);
+	padding: 0.5vw;
+	border-radius: 5px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -141,10 +157,27 @@ p {
 	.description a {
 		font-size: 15px;
 	}
+
+	.tag {
+		font-size: 15px;
+	}
 }
 
 @media screen and (max-width: 500px) {
 	h1 {
 		font-size: 40px;
+	}
+
+	.tags-container {
+		gap: 3vw;
+	}
+
+	.tag {
+		font-size: 15px;
+		padding: 1.5vw;
+	}
+
+	.description {
+		gap: 20px;
 	}
 }
