@@ -310,7 +310,7 @@
 			var videoClick = document.getElementById("videoClick");
 
 			videoClick.onclick = function () {
-				carousel.to(7);
+				carousel.to(carouselImages.length - 1);
 				openModal();
 				video.pause();
 				videoCarousel.currentTime = 0;

@@ -130,18 +130,6 @@
 								/>
 							</div>
 							<div class="carousel-item">
-								<img
-									class="d-block w-100"
-									alt="Volley Your Friends(game)"
-								/>
-							</div>
-							<div class="carousel-item">
-								<img
-									class="d-block w-100"
-									alt="Volley Your Friends(game)"
-								/>
-							</div>
-							<div class="carousel-item">
 								<video
 									id="videoCarousel"
 									controls
@@ -295,7 +283,7 @@
 			var videoClick = document.getElementById("videoClick");
 
 			videoClick.onclick = function () {
-				carousel.to(7);
+				carousel.to(carouselImages.length - 1);
 				openModal();
 				video.pause();
 				videoCarousel.currentTime = 0;

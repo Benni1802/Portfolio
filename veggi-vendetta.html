@@ -80,14 +80,34 @@
 					alt="Character Selection"
 				/>
 				<div class="video-container">
-					<video id="video" controls onloadstart="this.volume=0.25">
+					<video id="video0" controls onloadstart="this.volume=0.25">
 						<source
-							src="./assets/VYF/gameplay.mp4"
+							src="./assets/VV/StartMenu.mp4"
 							type="video/mp4"
 						/>
 						Your browser does not support the video tag.
 					</video>
-					<div id="videoClick"></div>
+					<div id="videoClick0"></div>
+				</div>
+				<div class="video-container">
+					<video id="video1" controls onloadstart="this.volume=0.25">
+						<source
+							src="./assets/VV/Gameplay.mp4"
+							type="video/mp4"
+						/>
+						Your browser does not support the video tag.
+					</video>
+					<div id="videoClick1"></div>
+				</div>
+				<div class="video-container">
+					<video id="video2" controls onloadstart="this.volume=0.25">
+						<source
+							src="./assets/VV/EndScreen.mp4"
+							type="video/mp4"
+						/>
+						Your browser does not support the video tag.
+					</video>
+					<div id="videoClick2"></div>
 				</div>
 			</div>
 			<div id="modal" class="modal">
@@ -113,12 +133,38 @@
 							</div>
 							<div class="carousel-item">
 								<video
-									id="videoCarousel"
+									id="videoCarousel0"
 									controls
 									onloadstart="this.volume=0.25"
 								>
 									<source
-										src="./assets/VYF/gameplay.mp4"
+										src="./assets/VV/StartMenu.mp4"
+										type="video/mp4"
+									/>
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<div class="carousel-item">
+								<video
+									id="videoCarousel1"
+									controls
+									onloadstart="this.volume=0.25"
+								>
+									<source
+										src="./assets/VV/Gameplay.mp4"
+										type="video/mp4"
+									/>
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<div class="carousel-item">
+								<video
+									id="videoCarousel2"
+									controls
+									onloadstart="this.volume=0.25"
+								>
+									<source
+										src="./assets/VV/EndScreen.mp4"
 										type="video/mp4"
 									/>
 									Your browser does not support the video tag.
@@ -175,8 +221,8 @@
 				<h2>Development</h2>
 				<p>
 					Veggi Vendetta was my first real project made with Unity. It
-					was developed during a one weekend long game jam. I worked in a
-					rather large team of 8 people. The team consisted of 3
+					was developed during a one weekend long game jam. I worked
+					in a rather large team of 8 people. The team consisted of 3
 					artists and 5 programmers. I was responsible for UI
 					programming and created the main menu, the character
 					selection, and the end screen.
@@ -235,8 +281,37 @@
 			});
 			var carouselImages =
 				carouselElement.getElementsByClassName("carousel-item");
-			var video = document.getElementById("video");
-			var videoCarousel = document.getElementById("videoCarousel");
+
+			var video = [];
+			var videoCarousel = [];
+			var videoClick = [];
+			for (var i = 0; i < 3; i++) {
+				video[i] = document.getElementById("video" + i);
+				videoCarousel[i] = document.getElementById("videoCarousel" + i);
+				videoClick[i] = document.getElementById("videoClick" + i);
+			}
+
+			videoClick[0].onclick = function () {
+				carousel.to(carouselImages.length - 3);
+				openModal();
+				video[0].pause();
+				videoCarousel[0].currentTime = 0;
+			};
+
+			videoClick[1].onclick = function () {
+				carousel.to(carouselImages.length - 2);
+				openModal();
+				video[1].pause();
+				videoCarousel[1].currentTime = 0;
+			};
+
+			videoClick[2].onclick = function () {
+				carousel.to(carouselImages.length - 1);
+				openModal();
+				video[2].pause();
+				videoCarousel[2].currentTime = 0;
+			};
+
 			var prev = document.getElementById("carousel-prev");
 			var next = document.getElementById("carousel-next");
 			for (
@@ -249,33 +324,32 @@
 					return function () {
 						carousel.to(index);
 						openModal();
-						video.pause();
-						videoCarousel.currentTime = 0;
+						for (var j = 0; j < 3; j++) {
+							video[j].pause();
+							videoCarousel[j].currentTime = 0;
+						}
 					};
 				})(i);
 			}
 
-			var videoClick = document.getElementById("videoClick");
-
-			videoClick.onclick = function () {
-				carousel.to(7);
-				openModal();
-				video.pause();
-				videoCarousel.currentTime = 0;
-			};
-
 			CloseButton.onclick = function () {
-				videoCarousel.pause();
-				videoCarousel.currentTime = 0;
+				for (var i = 0; i < 3; i++) {
+					videoCarousel[i].pause();
+					videoCarousel[i].currentTime = 0;
+				}
 				modal.style.display = "none";
 			};
 
 			prev.onclick = function () {
-				videoCarousel.pause();
+				for (var i = 0; i < 3; i++) {
+					videoCarousel[i].pause();
+				}
 			};
 
 			next.onclick = function () {
-				videoCarousel.pause();
+				for (var i = 0; i < 3; i++) {
+					videoCarousel[i].pause();
+				}
 			};
 
 			function openModal() {
