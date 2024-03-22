@@ -23,7 +23,7 @@
 		/>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+		<nav class="navbar navbar-expand-lg sticky" data-bs-theme="dark">
 			<div class="container-fluid">
 				<div class="icon">
 					<a href="/index.html">
@@ -58,25 +58,186 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="game-development.html"
-								>Game Development</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="computer-graphics.html"
-								>Computer Graphics</a
+							<a class="nav-link" href="index.html#projects"
+								>My Projects</a
 							>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<main>
-			<a href="/about-me.html">Benedikt Dietinger</a>
-			<div class="topics">
-				<a href="/game-development.html"> Game Development </a>
-				<a href="/computer-graphics.html"> Computer Graphics </a>
+		<main class="content">
+			<h1><a href="about-me.html">Benedikt Dietinger</a></h1>
+			<div id="projects-button">
+				<a href="#projects"> My Projects</a>
+
+				<a href="#projects"
+					><img
+						alt="Projects"
+						src="./assets/icons/arrow_down_blue.svg"
+				/></a>
 			</div>
+			<section id="projects">
+				<div class="carousel-container">
+					<div class="container-lg">
+						<div id="carousel1" class="carousel slide">
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target=".carousel"
+									data-bs-slide-to="0"
+									class="active"
+									aria-current="true"
+									aria-label="Slide 1"
+									onclick="moveTo(0)"
+								></button>
+								<button
+									type="button"
+									data-bs-target=".carousel"
+									data-bs-slide-to="1"
+									aria-label="Slide 2"
+									onclick="moveTo(1)"
+								></button>
+								<button
+									type="button"
+									data-bs-target=".carousel"
+									data-bs-slide-to="2"
+									aria-label="Slide 3"
+									onclick="moveTo(2)"
+								></button>
+								<button
+									type="button"
+									data-bs-target=".carousel"
+									data-bs-slide-to="3"
+									aria-label="Slide 4"
+									onclick="moveTo(3)"
+								></button>
+							</div>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<a href="lost-in-the-crowd.html">
+										<img
+											src="./assets/LITC/LostInTheCrowd.jpg"
+											class="d-block w-100"
+											alt="Lost In The Crowd(game)"
+										/>
+									</a>
+								</div>
+								<div class="carousel-item">
+									<a href="volley-your-friends.html">
+										<img
+											src="./assets/VYF/VolleyYourFriends.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</a>
+								</div>
+								<div class="carousel-item">
+									<a href="veggi-vendetta.html">
+										<img
+											src="./assets/VV/VeggiVendetta.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</a>
+								</div>
+								<div class="carousel-item">
+									<a href="shader-art.html">
+										<img
+											src="./assets/ShaderArt.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</a>
+								</div>
+							</div>
+
+							<button
+								id="carousel-prev"
+								class="carousel-control-prev"
+								type="button"
+								onclick="movePrev()"
+							>
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button
+								id="carousel-next"
+								class="carousel-control-next"
+								type="button"
+								onclick="moveNext()"
+							>
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="description-container">
+					<div class="container-lg">
+						<div id="carousel2" class="carousel slide">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="description">
+										<h2>Lost In The Crowd</h2>
+										<div class="tags-container">
+											<span class="tag">C#</span>
+											<span class="tag">SFML</span>
+										</div>
+										<a href="lost-in-the-crowd.html">
+											Find out more
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="description">
+										<h2>Volley Your Friends</h2>
+										<div class="tags-container">
+											<span class="tag">C++</span>
+											<span class="tag">SFML</span>
+											<span class="tag">Tiled</span>
+										</div>
+										<a href="volley-your-friends.html">
+											Find out more
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="description">
+										<h2>Veggi Vendetta</h2>
+										<div class="tags-container">
+											<span class="tag">C#</span>
+											<span class="tag">Unity</span>
+											<span class="tag">Game Jam</span>
+										</div>
+										<a href="veggi-vendetta.html">
+											Find out more
+										</a>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="description">
+										<h2>Shader Art</h2>
+										<div class="tags-container">
+											<span class="tag">Shadertoy</span>
+										</div>
+										<a href="shader-art.html">
+											Find out more
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-inner"></div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer>
 			<div class="footer-items">
@@ -112,5 +273,28 @@
 			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			var carousel1 = new bootstrap.Carousel(
+				document.getElementById("carousel1")
+			);
+			var carousel2 = new bootstrap.Carousel(
+				document.getElementById("carousel2")
+			);
+
+			function movePrev() {
+				carousel1.prev();
+				carousel2.prev();
+			}
+
+			function moveNext() {
+				carousel1.next();
+				carousel2.next();
+			}
+
+			function moveTo(index) {
+				carousel1.to(index);
+				carousel2.to(index);
+			}
+		</script>
 	</body>
 </html>

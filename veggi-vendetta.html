@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
+		<title>Portfolio Benedikt Dietinger</title>
+		<link rel="icon" href="./assets/icons/favicon.svg" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./global.css" />
+		<link rel="stylesheet" href="./veggi-vendetta.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Iceland:wght@400&display=swap"
+		/>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg sticky" data-bs-theme="dark">
+			<div class="container-fluid">
+				<div class="icon">
+					<a href="/index.html">
+						<img
+							alt="Home"
+							src="./assets/icons/home_icon.svg"
+							class="normal"
+						/>
+						<img
+							alt="Home"
+							src="./assets/icons/home_icon_hover.svg"
+							class="hover"
+						/>
+					</a>
+				</div>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="about-me.html"
+								>About Me</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html#projects"
+								>My Projects</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<div class="heading">
+				<h1>Veggi Vendetta</h1>
+			</div>
+			<div id="gallery" class="gallery">
+				<img
+					src="./assets/VV/VeggiVendetta.jpg"
+					alt="Veggi Vendetta (game)"
+				/>
+				<img
+					src="./assets/VV/Character_Selection.jpg"
+					alt="Character Selection"
+				/>
+				<div class="video-container">
+					<video id="video0" controls onloadstart="this.volume=0.25">
+						<source
+							src="./assets/VV/StartMenu.mp4"
+							type="video/mp4"
+						/>
+						Your browser does not support the video tag.
+					</video>
+					<div id="videoClick0"></div>
+				</div>
+				<div class="video-container">
+					<video id="video1" controls onloadstart="this.volume=0.25">
+						<source
+							src="./assets/VV/Gameplay.mp4"
+							type="video/mp4"
+						/>
+						Your browser does not support the video tag.
+					</video>
+					<div id="videoClick1"></div>
+				</div>
+				<div class="video-container">
+					<video id="video2" controls onloadstart="this.volume=0.25">
+						<source
+							src="./assets/VV/EndScreen.mp4"
+							type="video/mp4"
+						/>
+						Your browser does not support the video tag.
+					</video>
+					<div id="videoClick2"></div>
+				</div>
+			</div>
+			<div id="modal" class="modal">
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+
+				<!-- Modal Content (The Image) -->
+				<!--<img class="modal-content" id="m_img" />-->
+				<div class="container-lg">
+					<div id="carousel" class="carousel slide">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									class="modal-content d-block w-100"
+									alt="Veggi Vendetta(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									class="d-block w-100"
+									alt="Veggi Vendetta(game)"
+								/>
+							</div>
+							<div class="carousel-item">
+								<video
+									id="videoCarousel0"
+									controls
+									onloadstart="this.volume=0.25"
+								>
+									<source
+										src="./assets/VV/StartMenu.mp4"
+										type="video/mp4"
+									/>
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<div class="carousel-item">
+								<video
+									id="videoCarousel1"
+									controls
+									onloadstart="this.volume=0.25"
+								>
+									<source
+										src="./assets/VV/Gameplay.mp4"
+										type="video/mp4"
+									/>
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<div class="carousel-item">
+								<video
+									id="videoCarousel2"
+									controls
+									onloadstart="this.volume=0.25"
+								>
+									<source
+										src="./assets/VV/EndScreen.mp4"
+										type="video/mp4"
+									/>
+									Your browser does not support the video tag.
+								</video>
+							</div>
+						</div>
+
+						<button
+							id="carousel-prev"
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							id="carousel-next"
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carousel"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h2>Gameplay</h2>
+				<p>
+					Veggi Vendetta is a 2-4 player local multiplayer game. The
+					players take the role of different vegetables. The goal of
+					every vegetable is to jump into the cooking pot in the
+					middle of the map in order to be cooked! However, before
+					jumping in, the players have to collect points by eating the
+					other vegetables. This is achieved by dashing into another
+					player. Once a player has earned a point they can jump into
+					the pot to save their score. If they get eaten they lose all
+					their unsaved points. A player can hold up to 5 points at a
+					time. The game is over once the timer runs out. The player
+					with the most saved points wins.
+				</p>
+			</div>
+			<div>
+				<h2>Development</h2>
+				<p>
+					Veggi Vendetta was my first real project made with Unity. It
+					was developed during a one weekend long game jam. I worked
+					in a rather large team of 8 people. The team consisted of 3
+					artists and 5 programmers. I was responsible for UI
+					programming and created the main menu, the character
+					selection, and the end screen.
+				</p>
+			</div>
+		</main>
+		<footer>
+			<div class="footer-items">
+				<div>
+					<p>Benedikt Dietinger</p>
+				</div>
+				<div>
+					<img
+						id="email"
+						alt="Email"
+						src="./assets/icons/email_icon.svg"
+						class="normal"
+						width="24px"
+					/>
+					<a href="mailto:benedikt.dietinger@gmail.com"
+						>benedikt.dietinger@gmail.com</a
+					>
+				</div>
+				<div>
+					<img
+						id="phone"
+						alt="Phone"
+						src="./assets/icons/phone_icon.svg"
+						class="normal"
+						width="20px"
+					/>
+					<a href="tel:+4369913115565">+43 699 1311 5565</a>
+				</div>
+			</div>
+		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			var CloseButton = document.getElementsByClassName("close")[0];
+			var modal = document.getElementById("modal");
+			var modalImg = document.getElementById("m_img");
+
+			var images = document.querySelectorAll("#gallery img");
+			const carouselElement = document.querySelector("#carousel");
+			const carousel = new bootstrap.Carousel(carouselElement, {
+				interval: false,
+				touch: true,
+			});
+			var carouselImages =
+				carouselElement.getElementsByClassName("carousel-item");
+
+			var video = [];
+			var videoCarousel = [];
+			var videoClick = [];
+			for (var i = 0; i < 3; i++) {
+				video[i] = document.getElementById("video" + i);
+				videoCarousel[i] = document.getElementById("videoCarousel" + i);
+				videoClick[i] = document.getElementById("videoClick" + i);
+			}
+
+			videoClick[0].onclick = function () {
+				carousel.to(carouselImages.length - 3);
+				openModal();
+				video[0].pause();
+				videoCarousel[0].currentTime = 0;
+			};
+
+			videoClick[1].onclick = function () {
+				carousel.to(carouselImages.length - 2);
+				openModal();
+				video[1].pause();
+				videoCarousel[1].currentTime = 0;
+			};
+
+			videoClick[2].onclick = function () {
+				carousel.to(carouselImages.length - 1);
+				openModal();
+				video[2].pause();
+				videoCarousel[2].currentTime = 0;
+			};
+
+			var prev = document.getElementById("carousel-prev");
+			var next = document.getElementById("carousel-next");
+			for (
+				var i = 0;
+				i < images.length && i < carouselImages.length;
+				i++
+			) {
+				carouselImages[i].children[0].src = images[i].src;
+				images[i].onclick = (function (index) {
+					return function () {
+						carousel.to(index);
+						openModal();
+						for (var j = 0; j < 3; j++) {
+							video[j].pause();
+							videoCarousel[j].currentTime = 0;
+						}
+					};
+				})(i);
+			}
+
+			CloseButton.onclick = function () {
+				for (var i = 0; i < 3; i++) {
+					videoCarousel[i].pause();
+					videoCarousel[i].currentTime = 0;
+				}
+				modal.style.display = "none";
+			};
+
+			prev.onclick = function () {
+				for (var i = 0; i < 3; i++) {
+					videoCarousel[i].pause();
+				}
+			};
+
+			next.onclick = function () {
+				for (var i = 0; i < 3; i++) {
+					videoCarousel[i].pause();
+				}
+			};
+
+			function openModal() {
+				modal.style.display = "block";
+			}
+		</script>
+	</body>
+</html>

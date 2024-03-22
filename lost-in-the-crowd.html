@@ -23,7 +23,7 @@
 		/>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+		<nav class="navbar navbar-expand-lg sticky" data-bs-theme="dark">
 			<div class="container-fluid">
 				<div class="icon">
 					<a href="/index.html">
@@ -58,13 +58,8 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="game-development.html"
-								>Game Development</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="computer-graphics.html"
-								>Computer Graphics</a
+							<a class="nav-link" href="index.html#projects"
+								>My Projects</a
 							>
 						</li>
 					</ul>
@@ -315,7 +310,7 @@
 			var videoClick = document.getElementById("videoClick");
 
 			videoClick.onclick = function () {
-				carousel.to(7);
+				carousel.to(carouselImages.length - 1);
 				openModal();
 				video.pause();
 				videoCarousel.currentTime = 0;

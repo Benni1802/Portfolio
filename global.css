@@ -78,6 +78,12 @@ main {
 	border: none;
 }
 
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
 footer {
 	background-color: var(--color-steelblue);
 	height: 120px;
