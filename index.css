@@ -224,7 +224,7 @@ h2 {
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
 	h1 a {
 		font-size: 50px;
 	}
@@ -244,5 +244,9 @@ h2 {
 
 	.description {
 		gap: 20px;
+	}
+
+	h2 {
+		font-size: 30px;
 	}
 }
